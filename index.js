@@ -203,21 +203,6 @@ function init() {
 
     var material = new THREE.MeshPhongMaterial({ color: 0xffffff, shading: THREE.FlatShading });
 
-    for (var i = 0; i < 1000; i++) {
-        var mesh = new THREE.Mesh(geometry, material);
-        mesh
-            .position
-            .set(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5)
-            .normalize();
-        mesh
-            .position
-            .multiplyScalar(90 + (Math.random() * 700));
-        mesh
-            .rotation
-            .set(Math.random() * 2, Math.random() * 2, Math.random() * 2);
-        particle.add(mesh);
-    }
-
     var mat = new THREE.MeshPhongMaterial({ color: 0xffffff, shading: THREE.FlatShading });
 
     var mat2 = new THREE.MeshPhongMaterial({ color: 0xffffff, wireframe: true, side: THREE.DoubleSide });
